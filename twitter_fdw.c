@@ -31,10 +31,13 @@ PG_MODULE_MAGIC;
 
 
 #define HTTP_METHOD "GET"
+/*
 #define API_KEY "<API Key>"
 #define API_SECRET "<API Key Secret>"
 #define USER_ACCESS_TOKEN "<Access Token>"
 #define USER_ACCESS_TOKEN_SECRET "<Access Token Secret>"
+*/
+#include "keys.h"
 
 #define SEARCH_ENDPOINT "https://api.twitter.com/1.1/search/tweets.json"
 
@@ -157,9 +160,8 @@ static void twitterGetRelSize(PlannerInfo *root, RelOptInfo *baserel,
 							  Oid foreigntableid);
 static void twitterGetPaths(PlannerInfo *root, RelOptInfo *baserel,
 							Oid foreigntableid);
-static ForeignScan *twitterGetPlan(PlannerInfo *root, RelOptInfo *baserel,
-								   Oid foreigntableid, ForeignPath *best_path,
-								   List *tlist, List *scan_clauses);
+static ForeignScan *twitterGetPlan(PlannerInfo *root, RelOptInfo *baserel, 
+	Oid foreigntableid, ForeignPath *best_path, List *tlist, List *scan_clauses, Plan *outer_plan);
 static bool twitterAnalyze(Relation relation, AcquireSampleRowsFunc *func,
 						   BlockNumber *totalpages);
 #endif
@@ -272,7 +274,7 @@ twitter_param(Node *node, TupleDesc tupdesc)
 			return NULL;
 		varattno = ((Var *)left)->varattno;
 		Assert(0 < varattno && varattno <= tupdesc->natts);
-		key = NameStr(tupdesc->attrs[varattno - 1]->attname);
+		key = NameStr(tupdesc->attrs[varattno - 1].attname);
 
 		if (strcmp(key, "q") == 0)
 		{
@@ -423,20 +425,46 @@ twitterGetPaths(PlannerInfo *root, RelOptInfo *baserel, Oid foreigntableid)
 	Relation relation;
 	TupleDesc tupdesc;
 
-	relation = relation_open(foreigntableid, AccessShareLock);
+	relation = RelationIdGetRelation(foreigntableid);
 	tupdesc = relation->rd_att;
 	baserel->fdw_private = extract_twitter_conditions(baserel->baserestrictinfo, tupdesc);
-	relation_close(relation, AccessShareLock);
+	RelationClose(relation);
 
 	/* Create a ForeignPath node and add it as only possible path */
+
+/*
+extern ForeignPath *create_foreignscan_path(PlannerInfo *root, RelOptInfo *rel,
+                                                double rows, Cost startup_cost, Cost total_cost,
+                                                List *pathkeys,
+                                                Relids required_outer,
+                                                List *fdw_private);
+
+extern ForeignPath *create_foreignscan_path(PlannerInfo *root, RelOptInfo *rel,
+											PathTarget *target,
+											double rows, Cost startup_cost, Cost total_cost,
+											List *pathkeys,
+											Relids required_outer,
+											Path *fdw_outerpath,
+											List *fdw_private);
+
+
+*/
+
 	add_path(baserel,
-			 (Path *)create_foreignscan_path(root, baserel, baserel->rows,
-											 10, 1000, NIL, NULL, NIL));
+			 (Path *)create_foreignscan_path(root, baserel, 
+			 								NULL,		/* No PathTarget*/
+			 								baserel->rows, 
+											10, /* startup_cost */
+											1000, /* total_cost */
+											NIL, 
+											NULL, 
+											NULL,	/* no extra plan */
+											NIL));
 }
 
 static ForeignScan *
-twitterGetPlan(PlannerInfo *root, RelOptInfo *baserel, Oid foreigntableid,
-			   ForeignPath *bast_path, List *tlist, List *scan_clauses)
+twitterGetPlan(PlannerInfo *root, RelOptInfo *baserel, 
+	Oid foreigntableid, ForeignPath *best_path, List *tlist, List *scan_clauses, Plan *outer_plan)
 {
 	List *keep_clauses;
 	int *handle_clauses;
@@ -447,7 +475,23 @@ twitterGetPlan(PlannerInfo *root, RelOptInfo *baserel, Oid foreigntableid,
 	/* remove the RestrictInfo node from all remaining clauses */
 	keep_clauses = extract_actual_clauses(keep_clauses, false);
 
-	return make_foreignscan(tlist, keep_clauses, baserel->relid, NIL, baserel->fdw_private);
+/*
+
+extern ForeignScan *make_foreignscan(List *qptlist, List *qpqual,
+									 Index scanrelid, List *fdw_exprs, List *fdw_private,
+									 List *fdw_scan_tlist, List *fdw_recheck_quals,
+									 Plan *outer_plan);
+
+
+extern ForeignScan *make_foreignscan(List *qptlist, List *qpqual,
+                                 Index scanrelid, List *fdw_exprs, List *fdw_private);
+
+*/
+
+	return make_foreignscan(tlist, keep_clauses, baserel->relid, NIL, baserel->fdw_private,
+							NIL,	/* no custom tlist */
+							NIL,	/* no remote_exprs */
+							outer_plan);
 }
 
 static bool
@@ -496,7 +540,7 @@ twitterBegin(ForeignScanState *node, int eflags)
 		((ForeignScan *)node->ss.ps.plan)->fdw_private;
 #endif
 	CURL *curl;
-	int ret;
+	// int ret;
 	json_parser parser;
 	json_parser_dom helper;
 	ResultRoot *root;
@@ -505,6 +549,15 @@ twitterBegin(ForeignScanState *node, int eflags)
 	TwitterReply *reply;
 	char *url;
 	char *param_q = NULL;
+
+	//
+	int argc;
+	char **argv = NULL;
+	char *temp_url = NULL;
+	char *final_url = NULL;
+	char *auth_params = NULL;
+	char auth_header[BUF_HEADER_SIZE];
+	struct curl_slist* slist = NULL;
 
 	/*
 	 * Do nothing in EXPLAIN
@@ -520,14 +573,11 @@ twitterBegin(ForeignScanState *node, int eflags)
 	json_parser_init(&parser, NULL, json_parser_dom_callback, &helper);
 
 	// We need to use oauth to authenticate
-	char *temp_url = NULL;
-	char *final_url = NULL;
-	char *auth_params = NULL;
-	char auth_header[BUF_HEADER_SIZE];
+	
 	memset(&auth_header, 0, BUF_HEADER_SIZE);
 
-	char **argv = NULL;
-	int argc = oauth_split_url_parameters(url, &argv);
+	
+	argc = oauth_split_url_parameters(url, &argv);
 	temp_url = oauth_sign_array2(&argc, &argv,
 								 NULL, OA_HMAC, HTTP_METHOD,
 								 API_KEY, API_SECRET, USER_ACCESS_TOKEN, USER_ACCESS_TOKEN_SECRET);
@@ -540,7 +590,7 @@ twitterBegin(ForeignScanState *node, int eflags)
 	elog(DEBUG1, "requesting %s", url);
 	curl = curl_easy_init();
 
-	struct curl_slist* slist = NULL;
+	
 	slist = curl_slist_append(slist, auth_header);
 	curl_easy_setopt(curl, CURLOPT_HTTPHEADER, slist);
     curl_easy_setopt(curl, CURLOPT_URL, final_url);
@@ -548,7 +598,8 @@ twitterBegin(ForeignScanState *node, int eflags)
 
 	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
 	curl_easy_setopt(curl, CURLOPT_WRITEDATA, &parser);
-	ret = curl_easy_perform(curl);
+	//ret = curl_easy_perform(curl);
+	curl_easy_perform(curl);
 	curl_easy_cleanup(curl);
 
 	rel = node->ss.ss_currentRelation;
@@ -610,7 +661,7 @@ twitterIterate(ForeignScanState *node)
 	values = (char **)palloc(sizeof(char *) * natts);
 	for (i = 0; i < natts; i++)
 	{
-		Name attname = &rel->rd_att->attrs[i]->attname;
+		Name attname = &rel->rd_att->attrs[i].attname;
 
 		if (namestrcmp(attname, "id") == 0 && tweet->id)
 			values[i] = tweet->id;
@@ -640,7 +691,7 @@ twitterIterate(ForeignScanState *node)
 	oldcontext = MemoryContextSwitchTo(node->ss.ps.ps_ExprContext->ecxt_per_query_memory);
 	tuple = BuildTupleFromCStrings(reply->attinmeta, values);
 	MemoryContextSwitchTo(oldcontext);
-	ExecStoreTuple(tuple, slot, InvalidBuffer, true);
+	ExecStoreHeapTuple(tuple, slot, true);
 	reply->rownum++;
 
 	return slot;

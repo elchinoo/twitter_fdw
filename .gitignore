@@ -2,6 +2,7 @@
 .vscode/
 libjson-0.8/*
 API_KEYS.txt
+keys.h
 *.o
 *.so*
 *.a

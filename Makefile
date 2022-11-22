@@ -19,6 +19,6 @@ clean: clean-libjson
 clean-libjson:
 	$(MAKE) -C $(LIBJSON) clean
 
-PG_CONFIG = /usr/local/postgres/9.2/bin/pg_config
+PG_CONFIG = /usr/local/postgres/14/bin/pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
