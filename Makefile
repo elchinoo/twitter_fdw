@@ -7,7 +7,7 @@ EXTENSION = twitter_fdw
 DATA = twitter_fdw--1.1.0.sql
 
 REGRESS = twitter_fdw
-SHLIB_LINK = -lcurl
+SHLIB_LINK = -lcurl -loauth
 
 all:all-libjson
 
@@ -19,6 +19,6 @@ clean: clean-libjson
 clean-libjson:
 	$(MAKE) -C $(LIBJSON) clean
 
-PG_CONFIG = pg_config
+PG_CONFIG = /usr/local/postgres/9.2/bin/pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)

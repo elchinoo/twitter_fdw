@@ -1,0 +1,2866 @@
+{
+    "statuses": [
+        {
+            "created_at": "Tue Nov 22 00:39:45 +0000 2022",
+            "id": 1594853105078005761,
+            "id_str": "1594853105078005761",
+            "text": "RT @andatki: I'll be at @AWSreInvent next week in Vegas, and would love to connect with you about #PostgreSQL, Aurora, serverless in practi\u2026",
+            "truncated": false,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "PostgreSQL",
+                        "indices": [
+                            98,
+                            109
+                        ]
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "andatki",
+                        "name": "Andrew Atkinson (he\/him)",
+                        "id": 2460009624,
+                        "id_str": "2460009624",
+                        "indices": [
+                            3,
+                            11
+                        ]
+                    },
+                    {
+                        "screen_name": "AWSreInvent",
+                        "name": "AWS re:Invent",
+                        "id": 571241517,
+                        "id_str": "571241517",
+                        "indices": [
+                            24,
+                            36
+                        ]
+                    }
+                ],
+                "urls": []
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\"\u003eTwitter for iPhone\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 14497060,
+                "id_str": "14497060",
+                "name": "parity account",
+                "screen_name": "robtreat2",
+                "location": "South of Reality",
+                "description": "I help people Postgres. I enjoy root beer & road trips. My favorite colour is Amber. #WebOps #DBRE #\ud83e\udd51",
+                "url": "https:\/\/t.co\/jHXnCLO0Vo",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https:\/\/t.co\/jHXnCLO0Vo",
+                                "expanded_url": "https:\/\/summerofcubans.substack.com\/",
+                                "display_url": "summerofcubans.substack.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 1234,
+                "friends_count": 40,
+                "listed_count": 143,
+                "created_at": "Wed Apr 23 17:06:19 +0000 2008",
+                "favourites_count": 89,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 12597,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "000000",
+                "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1447968375334899713\/Svi7AR59_normal.jpg",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1447968375334899713\/Svi7AR59_normal.jpg",
+                "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/14497060\/1554649090",
+                "profile_link_color": "89C9FA",
+                "profile_sidebar_border_color": "000000",
+                "profile_sidebar_fill_color": "000000",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweeted_status": {
+                "created_at": "Mon Nov 21 23:00:35 +0000 2022",
+                "id": 1594828148125966368,
+                "id_str": "1594828148125966368",
+                "text": "I'll be at @AWSreInvent next week in Vegas, and would love to connect with you about #PostgreSQL, Aurora, serverles\u2026 https:\/\/t.co\/zhWoXudeNv",
+                "truncated": true,
+                "entities": {
+                    "hashtags": [
+                        {
+                            "text": "PostgreSQL",
+                            "indices": [
+                                85,
+                                96
+                            ]
+                        }
+                    ],
+                    "symbols": [],
+                    "user_mentions": [
+                        {
+                            "screen_name": "AWSreInvent",
+                            "name": "AWS re:Invent",
+                            "id": 571241517,
+                            "id_str": "571241517",
+                            "indices": [
+                                11,
+                                23
+                            ]
+                        }
+                    ],
+                    "urls": [
+                        {
+                            "url": "https:\/\/t.co\/zhWoXudeNv",
+                            "expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1594828148125966368",
+                            "display_url": "twitter.com\/i\/web\/status\/1\u2026",
+                            "indices": [
+                                117,
+                                140
+                            ]
+                        }
+                    ]
+                },
+                "metadata": {
+                    "iso_language_code": "en",
+                    "result_type": "recent"
+                },
+                "source": "\u003ca href=\"https:\/\/mobile.twitter.com\" rel=\"nofollow\"\u003eTwitter Web App\u003c\/a\u003e",
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "in_reply_to_screen_name": null,
+                "user": {
+                    "id": 2460009624,
+                    "id_str": "2460009624",
+                    "name": "Andrew Atkinson (he\/him)",
+                    "screen_name": "andatki",
+                    "location": "Minneapolis, MN",
+                    "description": "Software Engineer. Dad. Runner. Ruby on Rails. PostgreSQL. #Timberwolves \ud83c\udfc0 fan. #BlackLivesMatter #StandWithUkraine \ud83c\uddfa\ud83c\udde6 #reproductiverights",
+                    "url": "https:\/\/t.co\/Gw4q34dlBS",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https:\/\/t.co\/Gw4q34dlBS",
+                                    "expanded_url": "https:\/\/andyatkinson.com",
+                                    "display_url": "andyatkinson.com",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": []
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 417,
+                    "friends_count": 687,
+                    "listed_count": 19,
+                    "created_at": "Wed Apr 23 17:09:46 +0000 2014",
+                    "favourites_count": 9223,
+                    "utc_offset": null,
+                    "time_zone": null,
+                    "geo_enabled": true,
+                    "verified": false,
+                    "statuses_count": 608,
+                    "lang": null,
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "022330",
+                    "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme15\/bg.png",
+                    "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme15\/bg.png",
+                    "profile_background_tile": false,
+                    "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1467694622168301571\/UUgcUcJj_normal.jpg",
+                    "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1467694622168301571\/UUgcUcJj_normal.jpg",
+                    "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/2460009624\/1647660489",
+                    "profile_link_color": "022330",
+                    "profile_sidebar_border_color": "FFFFFF",
+                    "profile_sidebar_fill_color": "A0C5C7",
+                    "profile_text_color": "333333",
+                    "profile_use_background_image": false,
+                    "has_extended_profile": false,
+                    "default_profile": false,
+                    "default_profile_image": false,
+                    "following": false,
+                    "follow_request_sent": false,
+                    "notifications": false,
+                    "translator_type": "none",
+                    "withheld_in_countries": []
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 1,
+                "favorite_count": 2,
+                "favorited": false,
+                "retweeted": false,
+                "lang": "en"
+            },
+            "is_quote_status": false,
+            "retweet_count": 1,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Tue Nov 22 00:31:29 +0000 2022",
+            "id": 1594851025130647552,
+            "id_str": "1594851025130647552",
+            "text": "RT @hunleyd: Easier Upgrades and Image Management for #PostgreSQL in #Kubernetes https:\/\/t.co\/qEeR7R6SWN",
+            "truncated": false,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "PostgreSQL",
+                        "indices": [
+                            54,
+                            65
+                        ]
+                    },
+                    {
+                        "text": "Kubernetes",
+                        "indices": [
+                            69,
+                            80
+                        ]
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "hunleyd",
+                        "name": "Douglas J Hunley @hunleyd@fosstodon.org",
+                        "id": 12320492,
+                        "id_str": "12320492",
+                        "indices": [
+                            3,
+                            11
+                        ]
+                    }
+                ],
+                "urls": [
+                    {
+                        "url": "https:\/\/t.co\/qEeR7R6SWN",
+                        "expanded_url": "https:\/\/bit.ly\/3AdBCmp",
+                        "display_url": "bit.ly\/3AdBCmp",
+                        "indices": [
+                            81,
+                            104
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"https:\/\/help.twitter.com\/en\/using-twitter\/how-to-tweet#source-labels\" rel=\"nofollow\"\u003e;) \u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 1425764869106585600,
+                "id_str": "1425764869106585600",
+                "name": "Austin Castel",
+                "screen_name": "austin_castel",
+                "location": "USA",
+                "description": "Retweeting Everything Kubernetes. A bot and Human | Follow @hrittikhere for swags :P",
+                "url": "https:\/\/t.co\/9LhOmK1IGP",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https:\/\/t.co\/9LhOmK1IGP",
+                                "expanded_url": "https:\/\/www.buymeacoffee.com\/hrittikhere",
+                                "display_url": "buymeacoffee.com\/hrittikhere",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 1282,
+                "friends_count": 1,
+                "listed_count": 13,
+                "created_at": "Thu Aug 12 10:23:38 +0000 2021",
+                "favourites_count": 228,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 184062,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "F5F8FA",
+                "profile_background_image_url": null,
+                "profile_background_image_url_https": null,
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1426628888776507393\/GoXTMwa9_normal.jpg",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1426628888776507393\/GoXTMwa9_normal.jpg",
+                "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/1425764869106585600\/1629050577",
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": true,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweeted_status": {
+                "created_at": "Mon Nov 21 20:01:14 +0000 2022",
+                "id": 1594783013849927682,
+                "id_str": "1594783013849927682",
+                "text": "Easier Upgrades and Image Management for #PostgreSQL in #Kubernetes https:\/\/t.co\/qEeR7R6SWN",
+                "truncated": false,
+                "entities": {
+                    "hashtags": [
+                        {
+                            "text": "PostgreSQL",
+                            "indices": [
+                                41,
+                                52
+                            ]
+                        },
+                        {
+                            "text": "Kubernetes",
+                            "indices": [
+                                56,
+                                67
+                            ]
+                        }
+                    ],
+                    "symbols": [],
+                    "user_mentions": [],
+                    "urls": [
+                        {
+                            "url": "https:\/\/t.co\/qEeR7R6SWN",
+                            "expanded_url": "https:\/\/bit.ly\/3AdBCmp",
+                            "display_url": "bit.ly\/3AdBCmp",
+                            "indices": [
+                                68,
+                                91
+                            ]
+                        }
+                    ]
+                },
+                "metadata": {
+                    "iso_language_code": "en",
+                    "result_type": "recent"
+                },
+                "source": "\u003ca href=\"https:\/\/buffer.com\" rel=\"nofollow\"\u003eBuffer\u003c\/a\u003e",
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "in_reply_to_screen_name": null,
+                "user": {
+                    "id": 12320492,
+                    "id_str": "12320492",
+                    "name": "Douglas J Hunley @hunleyd@fosstodon.org",
+                    "screen_name": "hunleyd",
+                    "location": "39.904241,-82.810472",
+                    "description": "Also known as: @hunleyd@fosstodon.org\nLinux Sys Admin, Gentoo user, PostgreSQL advocate, Android fanboi, OSS supporter, PlayStation gamer.\nFounder of @pgcmh.",
+                    "url": "https:\/\/t.co\/RbuiZwTvar",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https:\/\/t.co\/RbuiZwTvar",
+                                    "expanded_url": "http:\/\/hunleyd.github.io",
+                                    "display_url": "hunleyd.github.io",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": []
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 492,
+                    "friends_count": 199,
+                    "listed_count": 49,
+                    "created_at": "Wed Jan 16 15:21:36 +0000 2008",
+                    "favourites_count": 4241,
+                    "utc_offset": null,
+                    "time_zone": null,
+                    "geo_enabled": true,
+                    "verified": false,
+                    "statuses_count": 1811,
+                    "lang": null,
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "3B94D9",
+                    "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_tile": false,
+                    "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/801487011010007040\/iVGga02l_normal.jpg",
+                    "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/801487011010007040\/iVGga02l_normal.jpg",
+                    "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/12320492\/1528394420",
+                    "profile_link_color": "3B94D9",
+                    "profile_sidebar_border_color": "889770",
+                    "profile_sidebar_fill_color": "D8E8B7",
+                    "profile_text_color": "CCA74A",
+                    "profile_use_background_image": false,
+                    "has_extended_profile": true,
+                    "default_profile": false,
+                    "default_profile_image": false,
+                    "following": false,
+                    "follow_request_sent": false,
+                    "notifications": false,
+                    "translator_type": "none",
+                    "withheld_in_countries": []
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 1,
+                "favorite_count": 1,
+                "favorited": false,
+                "retweeted": false,
+                "possibly_sensitive": false,
+                "lang": "en"
+            },
+            "is_quote_status": false,
+            "retweet_count": 1,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Tue Nov 22 00:15:10 +0000 2022",
+            "id": 1594846915610677248,
+            "id_str": "1594846915610677248",
+            "text": "RT @fritshoogland: RT @ascherbaum@mastodon.social\n#PostgreSQL folks new on (1\/3)",
+            "truncated": false,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "PostgreSQL",
+                        "indices": [
+                            50,
+                            61
+                        ]
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "fritshoogland",
+                        "name": "Frits Hoogland",
+                        "id": 19898861,
+                        "id_str": "19898861",
+                        "indices": [
+                            3,
+                            17
+                        ]
+                    }
+                ],
+                "urls": []
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"https:\/\/www.postgresql.org\/\" rel=\"nofollow\"\u003eRaise PostgreSQL\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 1172357958048632837,
+                "id_str": "1172357958048632837",
+                "name": "raisepostgresql",
+                "screen_name": "raisepostgresql",
+                "location": "World-wide",
+                "description": "Raise PostgreSQL!",
+                "url": "https:\/\/t.co\/7B2awR6ynq",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https:\/\/t.co\/7B2awR6ynq",
+                                "expanded_url": "https:\/\/www.postgresql.org\/",
+                                "display_url": "postgresql.org",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 521,
+                "friends_count": 218,
+                "listed_count": 13,
+                "created_at": "Fri Sep 13 03:55:08 +0000 2019",
+                "favourites_count": 0,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 21292,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "F5F8FA",
+                "profile_background_image_url": null,
+                "profile_background_image_url_https": null,
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1172358073018703872\/OkbEJPF__normal.png",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1172358073018703872\/OkbEJPF__normal.png",
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": true,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweeted_status": {
+                "created_at": "Mon Nov 21 23:52:17 +0000 2022",
+                "id": 1594841158827773952,
+                "id_str": "1594841158827773952",
+                "text": "RT @ascherbaum@mastodon.social\n#PostgreSQL folks new on (1\/3)",
+                "truncated": false,
+                "entities": {
+                    "hashtags": [
+                        {
+                            "text": "PostgreSQL",
+                            "indices": [
+                                31,
+                                42
+                            ]
+                        }
+                    ],
+                    "symbols": [],
+                    "user_mentions": [],
+                    "urls": []
+                },
+                "metadata": {
+                    "iso_language_code": "en",
+                    "result_type": "recent"
+                },
+                "source": "\u003ca href=\"https:\/\/moa.party\" rel=\"nofollow\"\u003eMoa Bridge\u003c\/a\u003e",
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "in_reply_to_screen_name": null,
+                "user": {
+                    "id": 19898861,
+                    "id_str": "19898861",
+                    "name": "Frits Hoogland",
+                    "screen_name": "fritshoogland",
+                    "location": "Lutjebroek, Stede Broec",
+                    "description": "Official twitter account of Frits Hoogland, developer advocate at Yugabyte. Views are mine, not my employer. @fritshoogland@mastodon.world",
+                    "url": "https:\/\/t.co\/u5mZ8ukWnA",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https:\/\/t.co\/u5mZ8ukWnA",
+                                    "expanded_url": "https:\/\/dev.to\/fritshooglandyugabyte",
+                                    "display_url": "dev.to\/fritshooglandy\u2026",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": []
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 4018,
+                    "friends_count": 867,
+                    "listed_count": 92,
+                    "created_at": "Mon Feb 02 08:59:59 +0000 2009",
+                    "favourites_count": 6108,
+                    "utc_offset": null,
+                    "time_zone": null,
+                    "geo_enabled": true,
+                    "verified": false,
+                    "statuses_count": 13942,
+                    "lang": null,
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "C0DEED",
+                    "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_tile": false,
+                    "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/2065880628\/frits_taaipop_2012-2_normal.png",
+                    "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/2065880628\/frits_taaipop_2012-2_normal.png",
+                    "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/19898861\/1469007263",
+                    "profile_link_color": "1DA1F2",
+                    "profile_sidebar_border_color": "C0DEED",
+                    "profile_sidebar_fill_color": "DDEEF6",
+                    "profile_text_color": "333333",
+                    "profile_use_background_image": true,
+                    "has_extended_profile": true,
+                    "default_profile": true,
+                    "default_profile_image": false,
+                    "following": false,
+                    "follow_request_sent": false,
+                    "notifications": false,
+                    "translator_type": "none",
+                    "withheld_in_countries": []
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 1,
+                "favorite_count": 0,
+                "favorited": false,
+                "retweeted": false,
+                "lang": "en"
+            },
+            "is_quote_status": false,
+            "retweet_count": 1,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Tue Nov 22 00:06:46 +0000 2022",
+            "id": 1594844802067365888,
+            "id_str": "1594844802067365888",
+            "text": "RT @ascherbaum: PostgreSQL Person of the Week interview with: Tobias Bussmann (@TobiasBussmann)\n\n#PostgreSQL #PostgresFriends\nhttps:\/\/t.co\/\u2026",
+            "truncated": false,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "PostgreSQL",
+                        "indices": [
+                            97,
+                            108
+                        ]
+                    },
+                    {
+                        "text": "PostgresFriends",
+                        "indices": [
+                            109,
+                            125
+                        ]
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "ascherbaum",
+                        "name": "Andreas Scherbaum",
+                        "id": 423394795,
+                        "id_str": "423394795",
+                        "indices": [
+                            3,
+                            14
+                        ]
+                    },
+                    {
+                        "screen_name": "TobiasBussmann",
+                        "name": "Tobias Bussmann",
+                        "id": 4133126206,
+                        "id_str": "4133126206",
+                        "indices": [
+                            79,
+                            94
+                        ]
+                    }
+                ],
+                "urls": []
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"https:\/\/mobile.twitter.com\" rel=\"nofollow\"\u003eTwitter Web App\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 14902895,
+                "id_str": "14902895",
+                "name": "Stacey Haysler",
+                "screen_name": "shaysler",
+                "location": "San Francisco CA",
+                "description": "She\/Her. Follow me for: books, chocolate, PostgreSQL, HR, the glamour of the consulting life, and random things that catch my attention.",
+                "url": null,
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 211,
+                "friends_count": 118,
+                "listed_count": 12,
+                "created_at": "Sun May 25 23:30:32 +0000 2008",
+                "favourites_count": 38794,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 5461,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/58277290\/swan_dance_normal.jpeg",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/58277290\/swan_dance_normal.jpeg",
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": false,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweeted_status": {
+                "created_at": "Mon Nov 21 14:59:51 +0000 2022",
+                "id": 1594707168967770113,
+                "id_str": "1594707168967770113",
+                "text": "PostgreSQL Person of the Week interview with: Tobias Bussmann (@TobiasBussmann)\n\n#PostgreSQL #PostgresFriends\nhttps:\/\/t.co\/Pugp8DNDNd",
+                "truncated": false,
+                "entities": {
+                    "hashtags": [
+                        {
+                            "text": "PostgreSQL",
+                            "indices": [
+                                81,
+                                92
+                            ]
+                        },
+                        {
+                            "text": "PostgresFriends",
+                            "indices": [
+                                93,
+                                109
+                            ]
+                        }
+                    ],
+                    "symbols": [],
+                    "user_mentions": [
+                        {
+                            "screen_name": "TobiasBussmann",
+                            "name": "Tobias Bussmann",
+                            "id": 4133126206,
+                            "id_str": "4133126206",
+                            "indices": [
+                                63,
+                                78
+                            ]
+                        }
+                    ],
+                    "urls": [
+                        {
+                            "url": "https:\/\/t.co\/Pugp8DNDNd",
+                            "expanded_url": "https:\/\/postgresql.life\/post\/tobias_bussmann\/",
+                            "display_url": "postgresql.life\/post\/tobias_bu\u2026",
+                            "indices": [
+                                110,
+                                133
+                            ]
+                        }
+                    ]
+                },
+                "metadata": {
+                    "iso_language_code": "en",
+                    "result_type": "recent"
+                },
+                "source": "\u003ca href=\"https:\/\/mobile.twitter.com\" rel=\"nofollow\"\u003eTwitter Web App\u003c\/a\u003e",
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "in_reply_to_screen_name": null,
+                "user": {
+                    "id": 423394795,
+                    "id_str": "423394795",
+                    "name": "Andreas Scherbaum",
+                    "screen_name": "ascherbaum",
+                    "location": "",
+                    "description": "Mastodon: https:\/\/t.co\/4KBIMXqywg",
+                    "url": "https:\/\/t.co\/xU5KKFbJRV",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https:\/\/t.co\/xU5KKFbJRV",
+                                    "expanded_url": "https:\/\/andreas.scherbaum.la\/",
+                                    "display_url": "andreas.scherbaum.la",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": [
+                                {
+                                    "url": "https:\/\/t.co\/4KBIMXqywg",
+                                    "expanded_url": "https:\/\/mastodon.social\/@ascherbaum",
+                                    "display_url": "mastodon.social\/@ascherbaum",
+                                    "indices": [
+                                        10,
+                                        33
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 1395,
+                    "friends_count": 493,
+                    "listed_count": 59,
+                    "created_at": "Mon Nov 28 13:05:36 +0000 2011",
+                    "favourites_count": 1,
+                    "utc_offset": null,
+                    "time_zone": null,
+                    "geo_enabled": false,
+                    "verified": false,
+                    "statuses_count": 45574,
+                    "lang": null,
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "C0DEED",
+                    "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_tile": false,
+                    "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/3722829793\/ae44d3fcc2710a61f5fa048eb0bb42cb_normal.jpeg",
+                    "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/3722829793\/ae44d3fcc2710a61f5fa048eb0bb42cb_normal.jpeg",
+                    "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/423394795\/1369744934",
+                    "profile_link_color": "1DA1F2",
+                    "profile_sidebar_border_color": "C0DEED",
+                    "profile_sidebar_fill_color": "DDEEF6",
+                    "profile_text_color": "333333",
+                    "profile_use_background_image": true,
+                    "has_extended_profile": false,
+                    "default_profile": true,
+                    "default_profile_image": false,
+                    "following": false,
+                    "follow_request_sent": false,
+                    "notifications": false,
+                    "translator_type": "none",
+                    "withheld_in_countries": []
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 5,
+                "favorite_count": 5,
+                "favorited": false,
+                "retweeted": false,
+                "possibly_sensitive": false,
+                "lang": "en"
+            },
+            "is_quote_status": false,
+            "retweet_count": 5,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Tue Nov 22 00:02:59 +0000 2022",
+            "id": 1594843852892147712,
+            "id_str": "1594843852892147712",
+            "text": "HIRING: Senior Software Engineer - Big Data \/ Bengaluru https:\/\/t.co\/43Ss3COXcH #AI #MachineLearning #DataJobs\u2026 https:\/\/t.co\/IgLj3gdVIO",
+            "truncated": true,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "AI",
+                        "indices": [
+                            80,
+                            83
+                        ]
+                    },
+                    {
+                        "text": "MachineLearning",
+                        "indices": [
+                            84,
+                            100
+                        ]
+                    },
+                    {
+                        "text": "DataJobs",
+                        "indices": [
+                            101,
+                            110
+                        ]
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": [
+                    {
+                        "url": "https:\/\/t.co\/43Ss3COXcH",
+                        "expanded_url": "https:\/\/ai-jobs.net\/J33422\/",
+                        "display_url": "ai-jobs.net\/J33422\/",
+                        "indices": [
+                            56,
+                            79
+                        ]
+                    },
+                    {
+                        "url": "https:\/\/t.co\/IgLj3gdVIO",
+                        "expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1594843852892147712",
+                        "display_url": "twitter.com\/i\/web\/status\/1\u2026",
+                        "indices": [
+                            112,
+                            135
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "in",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"https:\/\/ai-jobs.net\" rel=\"nofollow\"\u003eai-jobs.net\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 1014944290236174336,
+                "id_str": "1014944290236174336",
+                "name": "ai-jobs.net",
+                "screen_name": "ai_jobsNET",
+                "location": "worldwide",
+                "description": "The most comprehensive job site related to all things AI, Machine Learning and Big Data. \ud83e\udd13\u2615\u2615\ud83d\udcbb\ud83e\udd16 Check out our salary survey here: https:\/\/t.co\/TsuuVk8mtV",
+                "url": "https:\/\/t.co\/9Eftdy9Zjc",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https:\/\/t.co\/9Eftdy9Zjc",
+                                "expanded_url": "https:\/\/ai-jobs.net",
+                                "display_url": "ai-jobs.net",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": [
+                            {
+                                "url": "https:\/\/t.co\/TsuuVk8mtV",
+                                "expanded_url": "http:\/\/ai-jobs.net\/salaries",
+                                "display_url": "ai-jobs.net\/salaries",
+                                "indices": [
+                                    129,
+                                    152
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "protected": false,
+                "followers_count": 1386,
+                "friends_count": 126,
+                "listed_count": 34,
+                "created_at": "Thu Jul 05 18:49:10 +0000 2018",
+                "favourites_count": 2210,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 29536,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "F5F8FA",
+                "profile_background_image_url": null,
+                "profile_background_image_url_https": null,
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1051739131234185216\/MRYkBcJ9_normal.jpg",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1051739131234185216\/MRYkBcJ9_normal.jpg",
+                "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/1014944290236174336\/1668026784",
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": true,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "in"
+        },
+        {
+            "created_at": "Tue Nov 22 00:00:10 +0000 2022",
+            "id": 1594843140967604227,
+            "id_str": "1594843140967604227",
+            "text": "RT @datamongerbonny: Did you ever have one of those days? A seemingly easy process wasn\u2019t...and then you look around and everyone is just l\u2026",
+            "truncated": false,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "datamongerbonny",
+                        "name": "bonny mcclain, human geographer, speaker, author\ud83c\udf0f",
+                        "id": 33310560,
+                        "id_str": "33310560",
+                        "indices": [
+                            3,
+                            19
+                        ]
+                    }
+                ],
+                "urls": []
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"https:\/\/www.postgresql.org\/\" rel=\"nofollow\"\u003eRaise PostgreSQL\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 1172357958048632837,
+                "id_str": "1172357958048632837",
+                "name": "raisepostgresql",
+                "screen_name": "raisepostgresql",
+                "location": "World-wide",
+                "description": "Raise PostgreSQL!",
+                "url": "https:\/\/t.co\/7B2awR6ynq",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https:\/\/t.co\/7B2awR6ynq",
+                                "expanded_url": "https:\/\/www.postgresql.org\/",
+                                "display_url": "postgresql.org",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 521,
+                "friends_count": 218,
+                "listed_count": 13,
+                "created_at": "Fri Sep 13 03:55:08 +0000 2019",
+                "favourites_count": 0,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 21292,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "F5F8FA",
+                "profile_background_image_url": null,
+                "profile_background_image_url_https": null,
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1172358073018703872\/OkbEJPF__normal.png",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1172358073018703872\/OkbEJPF__normal.png",
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": true,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweeted_status": {
+                "created_at": "Mon Nov 21 22:52:48 +0000 2022",
+                "id": 1594826189130145810,
+                "id_str": "1594826189130145810",
+                "text": "Did you ever have one of those days? A seemingly easy process wasn\u2019t...and then you look around and everyone is jus\u2026 https:\/\/t.co\/8CdJDiL6ky",
+                "truncated": true,
+                "entities": {
+                    "hashtags": [],
+                    "symbols": [],
+                    "user_mentions": [],
+                    "urls": [
+                        {
+                            "url": "https:\/\/t.co\/8CdJDiL6ky",
+                            "expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1594826189130145810",
+                            "display_url": "twitter.com\/i\/web\/status\/1\u2026",
+                            "indices": [
+                                117,
+                                140
+                            ]
+                        }
+                    ]
+                },
+                "metadata": {
+                    "iso_language_code": "en",
+                    "result_type": "recent"
+                },
+                "source": "\u003ca href=\"https:\/\/mobile.twitter.com\" rel=\"nofollow\"\u003eTwitter Web App\u003c\/a\u003e",
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "in_reply_to_screen_name": null,
+                "user": {
+                    "id": 33310560,
+                    "id_str": "33310560",
+                    "name": "bonny mcclain, human geographer, speaker, author\ud83c\udf0f",
+                    "screen_name": "datamongerbonny",
+                    "location": "blooming where planted...",
+                    "description": "Polymath exploring environmental racism, persistent barriers to inclusion: spatial analyst | National Press Club | @URISA @500WomenSci @ArcGIS @QGIS #python#SQL",
+                    "url": "https:\/\/t.co\/3MAW1NiFFn",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https:\/\/t.co\/3MAW1NiFFn",
+                                    "expanded_url": "https:\/\/linktr.ee\/datamongerbonny",
+                                    "display_url": "linktr.ee\/datamongerbonny",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": []
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 3158,
+                    "friends_count": 1328,
+                    "listed_count": 150,
+                    "created_at": "Sun Apr 19 20:56:59 +0000 2009",
+                    "favourites_count": 8642,
+                    "utc_offset": null,
+                    "time_zone": null,
+                    "geo_enabled": false,
+                    "verified": false,
+                    "statuses_count": 15019,
+                    "lang": null,
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "000000",
+                    "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_tile": false,
+                    "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1489654482707402764\/z-PlAy-k_normal.jpg",
+                    "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1489654482707402764\/z-PlAy-k_normal.jpg",
+                    "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/33310560\/1660247735",
+                    "profile_link_color": "1B95E0",
+                    "profile_sidebar_border_color": "000000",
+                    "profile_sidebar_fill_color": "000000",
+                    "profile_text_color": "000000",
+                    "profile_use_background_image": false,
+                    "has_extended_profile": true,
+                    "default_profile": false,
+                    "default_profile_image": false,
+                    "following": false,
+                    "follow_request_sent": false,
+                    "notifications": false,
+                    "translator_type": "none",
+                    "withheld_in_countries": []
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 1,
+                "favorite_count": 1,
+                "favorited": false,
+                "retweeted": false,
+                "possibly_sensitive": false,
+                "lang": "en"
+            },
+            "is_quote_status": false,
+            "retweet_count": 1,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 21 23:52:17 +0000 2022",
+            "id": 1594841158827773952,
+            "id_str": "1594841158827773952",
+            "text": "RT @ascherbaum@mastodon.social\n#PostgreSQL folks new on (1\/3)",
+            "truncated": false,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "PostgreSQL",
+                        "indices": [
+                            31,
+                            42
+                        ]
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": []
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"https:\/\/moa.party\" rel=\"nofollow\"\u003eMoa Bridge\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 19898861,
+                "id_str": "19898861",
+                "name": "Frits Hoogland",
+                "screen_name": "fritshoogland",
+                "location": "Lutjebroek, Stede Broec",
+                "description": "Official twitter account of Frits Hoogland, developer advocate at Yugabyte. Views are mine, not my employer. @fritshoogland@mastodon.world",
+                "url": "https:\/\/t.co\/u5mZ8ukWnA",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https:\/\/t.co\/u5mZ8ukWnA",
+                                "expanded_url": "https:\/\/dev.to\/fritshooglandyugabyte",
+                                "display_url": "dev.to\/fritshooglandy\u2026",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 4018,
+                "friends_count": 867,
+                "listed_count": 92,
+                "created_at": "Mon Feb 02 08:59:59 +0000 2009",
+                "favourites_count": 6108,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 13942,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/2065880628\/frits_taaipop_2012-2_normal.png",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/2065880628\/frits_taaipop_2012-2_normal.png",
+                "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/19898861\/1469007263",
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": true,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 1,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 21 23:50:49 +0000 2022",
+            "id": 1594840788936331265,
+            "id_str": "1594840788936331265",
+            "text": "RT @hnasr: Batching in Postgres\n\nPostgres has an option to delay commits so more transactions can arrive to the WAL. The WAL can then be fl\u2026",
+            "truncated": false,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "hnasr",
+                        "name": "Hussein Nasser",
+                        "id": 170687510,
+                        "id_str": "170687510",
+                        "indices": [
+                            3,
+                            9
+                        ]
+                    }
+                ],
+                "urls": []
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\"\u003eTwitter for iPhone\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 1038422334548463618,
+                "id_str": "1038422334548463618",
+                "name": "Joe Kirincic",
+                "screen_name": "KirincicJoe",
+                "location": "",
+                "description": "",
+                "url": null,
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 63,
+                "friends_count": 684,
+                "listed_count": 1,
+                "created_at": "Sat Sep 08 13:42:32 +0000 2018",
+                "favourites_count": 11169,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 2966,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "F5F8FA",
+                "profile_background_image_url": null,
+                "profile_background_image_url_https": null,
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1096842503649705984\/czTmYN84_normal.jpg",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1096842503649705984\/czTmYN84_normal.jpg",
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": false,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweeted_status": {
+                "created_at": "Mon Nov 21 02:29:11 +0000 2022",
+                "id": 1594518255422640128,
+                "id_str": "1594518255422640128",
+                "text": "Batching in Postgres\n\nPostgres has an option to delay commits so more transactions can arrive to the WAL. The WAL c\u2026 https:\/\/t.co\/rnYQomtG8E",
+                "truncated": true,
+                "entities": {
+                    "hashtags": [],
+                    "symbols": [],
+                    "user_mentions": [],
+                    "urls": [
+                        {
+                            "url": "https:\/\/t.co\/rnYQomtG8E",
+                            "expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1594518255422640128",
+                            "display_url": "twitter.com\/i\/web\/status\/1\u2026",
+                            "indices": [
+                                117,
+                                140
+                            ]
+                        }
+                    ]
+                },
+                "metadata": {
+                    "iso_language_code": "en",
+                    "result_type": "recent"
+                },
+                "source": "\u003ca href=\"https:\/\/buffer.com\" rel=\"nofollow\"\u003eBuffer\u003c\/a\u003e",
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "in_reply_to_screen_name": null,
+                "user": {
+                    "id": 170687510,
+                    "id_str": "170687510",
+                    "name": "Hussein Nasser",
+                    "screen_name": "hnasr",
+                    "location": "California, USA",
+                    "description": "Host of the Backend Engineering Show. YouTube software engineering videos, Principal Engineer @Esri. Opinions are my own",
+                    "url": "https:\/\/t.co\/ZjAklkAsN1",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https:\/\/t.co\/ZjAklkAsN1",
+                                    "expanded_url": "https:\/\/www.youtube.com\/HusseinNasser-software-engineering",
+                                    "display_url": "youtube.com\/HusseinNasser-\u2026",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": []
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 18601,
+                    "friends_count": 604,
+                    "listed_count": 145,
+                    "created_at": "Sun Jul 25 13:52:00 +0000 2010",
+                    "favourites_count": 1928,
+                    "utc_offset": null,
+                    "time_zone": null,
+                    "geo_enabled": true,
+                    "verified": false,
+                    "statuses_count": 19190,
+                    "lang": null,
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "131516",
+                    "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme14\/bg.gif",
+                    "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme14\/bg.gif",
+                    "profile_background_tile": true,
+                    "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/984174464521809920\/iLq9JFPK_normal.jpg",
+                    "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/984174464521809920\/iLq9JFPK_normal.jpg",
+                    "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/170687510\/1580701922",
+                    "profile_link_color": "009999",
+                    "profile_sidebar_border_color": "EEEEEE",
+                    "profile_sidebar_fill_color": "EFEFEF",
+                    "profile_text_color": "333333",
+                    "profile_use_background_image": true,
+                    "has_extended_profile": true,
+                    "default_profile": false,
+                    "default_profile_image": false,
+                    "following": false,
+                    "follow_request_sent": false,
+                    "notifications": false,
+                    "translator_type": "none",
+                    "withheld_in_countries": []
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 16,
+                "favorite_count": 121,
+                "favorited": false,
+                "retweeted": false,
+                "possibly_sensitive": false,
+                "lang": "en"
+            },
+            "is_quote_status": false,
+            "retweet_count": 16,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 21 23:29:04 +0000 2022",
+            "id": 1594835316426375168,
+            "id_str": "1594835316426375168",
+            "text": "Learn how @EDBPostgres helps @LondonPartners support the complex search behaviors of more than 2 million visitors t\u2026 https:\/\/t.co\/IpboCwgDWc",
+            "truncated": true,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "EDBPostgres",
+                        "name": "EDB Postgres",
+                        "id": 15012163,
+                        "id_str": "15012163",
+                        "indices": [
+                            10,
+                            22
+                        ]
+                    },
+                    {
+                        "screen_name": "londonpartners",
+                        "name": "London & Partners",
+                        "id": 270405643,
+                        "id_str": "270405643",
+                        "indices": [
+                            29,
+                            44
+                        ]
+                    }
+                ],
+                "urls": [
+                    {
+                        "url": "https:\/\/t.co\/IpboCwgDWc",
+                        "expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1594835316426375168",
+                        "display_url": "twitter.com\/i\/web\/status\/1\u2026",
+                        "indices": [
+                            117,
+                            140
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"https:\/\/www.oktopost.com\" rel=\"nofollow\"\u003eOktopost\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 20959328,
+                "id_str": "20959328",
+                "name": "Tom Rieger",
+                "screen_name": "tomlrieger",
+                "location": "Minnesota",
+                "description": "over 25 years in technology helping customers solve the next problem",
+                "url": null,
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 252,
+                "friends_count": 79,
+                "listed_count": 59,
+                "created_at": "Mon Feb 16 03:23:12 +0000 2009",
+                "favourites_count": 106,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 2445,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/88575870\/face_shot_normal.JPG",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/88575870\/face_shot_normal.JPG",
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": false,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 21 23:07:16 +0000 2022",
+            "id": 1594829830612295703,
+            "id_str": "1594829830612295703",
+            "text": "RT @ascherbaum: PostgreSQL Person of the Week interview with: Tobias Bussmann (@TobiasBussmann)\n\n#PostgreSQL #PostgresFriends\nhttps:\/\/t.co\/\u2026",
+            "truncated": false,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "PostgreSQL",
+                        "indices": [
+                            97,
+                            108
+                        ]
+                    },
+                    {
+                        "text": "PostgresFriends",
+                        "indices": [
+                            109,
+                            125
+                        ]
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "ascherbaum",
+                        "name": "Andreas Scherbaum",
+                        "id": 423394795,
+                        "id_str": "423394795",
+                        "indices": [
+                            3,
+                            14
+                        ]
+                    },
+                    {
+                        "screen_name": "TobiasBussmann",
+                        "name": "Tobias Bussmann",
+                        "id": 4133126206,
+                        "id_str": "4133126206",
+                        "indices": [
+                            79,
+                            94
+                        ]
+                    }
+                ],
+                "urls": []
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"https:\/\/mobile.twitter.com\" rel=\"nofollow\"\u003eTwitter Web App\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 17170196,
+                "id_str": "17170196",
+                "name": "Claire Giordano \u2728 @clairegiordano@hachyderm.io",
+                "screen_name": "clairegiordano",
+                "location": "San Francisco Bay Area, CA",
+                "description": "Work in open source @microsoft in @citusdata @AzureDBPostgres @AzureCosmosDB teams, co-chair @CitusCon, \u2764\ufe0f NH & sailing in Greece. CFP for #CitusCon is open!",
+                "url": "https:\/\/t.co\/P80oaJJyUF",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https:\/\/t.co\/P80oaJJyUF",
+                                "expanded_url": "https:\/\/hachyderm.io\/@clairegiordano",
+                                "display_url": "hachyderm.io\/@clairegiordano",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 1830,
+                "friends_count": 2162,
+                "listed_count": 271,
+                "created_at": "Tue Nov 04 21:51:13 +0000 2008",
+                "favourites_count": 28359,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 10150,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "FFFFFF",
+                "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme5\/bg.gif",
+                "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme5\/bg.gif",
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1380383475904126977\/cPv2s0za_normal.jpg",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1380383475904126977\/cPv2s0za_normal.jpg",
+                "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/17170196\/1517103462",
+                "profile_link_color": "D02B55",
+                "profile_sidebar_border_color": "829D5E",
+                "profile_sidebar_fill_color": "99CC33",
+                "profile_text_color": "3E4415",
+                "profile_use_background_image": false,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweeted_status": {
+                "created_at": "Mon Nov 21 14:59:51 +0000 2022",
+                "id": 1594707168967770113,
+                "id_str": "1594707168967770113",
+                "text": "PostgreSQL Person of the Week interview with: Tobias Bussmann (@TobiasBussmann)\n\n#PostgreSQL #PostgresFriends\nhttps:\/\/t.co\/Pugp8DNDNd",
+                "truncated": false,
+                "entities": {
+                    "hashtags": [
+                        {
+                            "text": "PostgreSQL",
+                            "indices": [
+                                81,
+                                92
+                            ]
+                        },
+                        {
+                            "text": "PostgresFriends",
+                            "indices": [
+                                93,
+                                109
+                            ]
+                        }
+                    ],
+                    "symbols": [],
+                    "user_mentions": [
+                        {
+                            "screen_name": "TobiasBussmann",
+                            "name": "Tobias Bussmann",
+                            "id": 4133126206,
+                            "id_str": "4133126206",
+                            "indices": [
+                                63,
+                                78
+                            ]
+                        }
+                    ],
+                    "urls": [
+                        {
+                            "url": "https:\/\/t.co\/Pugp8DNDNd",
+                            "expanded_url": "https:\/\/postgresql.life\/post\/tobias_bussmann\/",
+                            "display_url": "postgresql.life\/post\/tobias_bu\u2026",
+                            "indices": [
+                                110,
+                                133
+                            ]
+                        }
+                    ]
+                },
+                "metadata": {
+                    "iso_language_code": "en",
+                    "result_type": "recent"
+                },
+                "source": "\u003ca href=\"https:\/\/mobile.twitter.com\" rel=\"nofollow\"\u003eTwitter Web App\u003c\/a\u003e",
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "in_reply_to_screen_name": null,
+                "user": {
+                    "id": 423394795,
+                    "id_str": "423394795",
+                    "name": "Andreas Scherbaum",
+                    "screen_name": "ascherbaum",
+                    "location": "",
+                    "description": "Mastodon: https:\/\/t.co\/4KBIMXqywg",
+                    "url": "https:\/\/t.co\/xU5KKFbJRV",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https:\/\/t.co\/xU5KKFbJRV",
+                                    "expanded_url": "https:\/\/andreas.scherbaum.la\/",
+                                    "display_url": "andreas.scherbaum.la",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": [
+                                {
+                                    "url": "https:\/\/t.co\/4KBIMXqywg",
+                                    "expanded_url": "https:\/\/mastodon.social\/@ascherbaum",
+                                    "display_url": "mastodon.social\/@ascherbaum",
+                                    "indices": [
+                                        10,
+                                        33
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 1395,
+                    "friends_count": 493,
+                    "listed_count": 59,
+                    "created_at": "Mon Nov 28 13:05:36 +0000 2011",
+                    "favourites_count": 1,
+                    "utc_offset": null,
+                    "time_zone": null,
+                    "geo_enabled": false,
+                    "verified": false,
+                    "statuses_count": 45574,
+                    "lang": null,
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "C0DEED",
+                    "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_tile": false,
+                    "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/3722829793\/ae44d3fcc2710a61f5fa048eb0bb42cb_normal.jpeg",
+                    "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/3722829793\/ae44d3fcc2710a61f5fa048eb0bb42cb_normal.jpeg",
+                    "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/423394795\/1369744934",
+                    "profile_link_color": "1DA1F2",
+                    "profile_sidebar_border_color": "C0DEED",
+                    "profile_sidebar_fill_color": "DDEEF6",
+                    "profile_text_color": "333333",
+                    "profile_use_background_image": true,
+                    "has_extended_profile": false,
+                    "default_profile": true,
+                    "default_profile_image": false,
+                    "following": false,
+                    "follow_request_sent": false,
+                    "notifications": false,
+                    "translator_type": "none",
+                    "withheld_in_countries": []
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 5,
+                "favorite_count": 5,
+                "favorited": false,
+                "retweeted": false,
+                "possibly_sensitive": false,
+                "lang": "en"
+            },
+            "is_quote_status": false,
+            "retweet_count": 5,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 21 23:00:35 +0000 2022",
+            "id": 1594828148125966368,
+            "id_str": "1594828148125966368",
+            "text": "I'll be at @AWSreInvent next week in Vegas, and would love to connect with you about #PostgreSQL, Aurora, serverles\u2026 https:\/\/t.co\/zhWoXudeNv",
+            "truncated": true,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "PostgreSQL",
+                        "indices": [
+                            85,
+                            96
+                        ]
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "AWSreInvent",
+                        "name": "AWS re:Invent",
+                        "id": 571241517,
+                        "id_str": "571241517",
+                        "indices": [
+                            11,
+                            23
+                        ]
+                    }
+                ],
+                "urls": [
+                    {
+                        "url": "https:\/\/t.co\/zhWoXudeNv",
+                        "expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1594828148125966368",
+                        "display_url": "twitter.com\/i\/web\/status\/1\u2026",
+                        "indices": [
+                            117,
+                            140
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"https:\/\/mobile.twitter.com\" rel=\"nofollow\"\u003eTwitter Web App\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 2460009624,
+                "id_str": "2460009624",
+                "name": "Andrew Atkinson (he\/him)",
+                "screen_name": "andatki",
+                "location": "Minneapolis, MN",
+                "description": "Software Engineer. Dad. Runner. Ruby on Rails. PostgreSQL. #Timberwolves \ud83c\udfc0 fan. #BlackLivesMatter #StandWithUkraine \ud83c\uddfa\ud83c\udde6 #reproductiverights",
+                "url": "https:\/\/t.co\/Gw4q34dlBS",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https:\/\/t.co\/Gw4q34dlBS",
+                                "expanded_url": "https:\/\/andyatkinson.com",
+                                "display_url": "andyatkinson.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 417,
+                "friends_count": 687,
+                "listed_count": 19,
+                "created_at": "Wed Apr 23 17:09:46 +0000 2014",
+                "favourites_count": 9223,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 608,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "022330",
+                "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme15\/bg.png",
+                "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme15\/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1467694622168301571\/UUgcUcJj_normal.jpg",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1467694622168301571\/UUgcUcJj_normal.jpg",
+                "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/2460009624\/1647660489",
+                "profile_link_color": "022330",
+                "profile_sidebar_border_color": "FFFFFF",
+                "profile_sidebar_fill_color": "A0C5C7",
+                "profile_text_color": "333333",
+                "profile_use_background_image": false,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 1,
+            "favorite_count": 2,
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 21 22:52:48 +0000 2022",
+            "id": 1594826189130145810,
+            "id_str": "1594826189130145810",
+            "text": "Did you ever have one of those days? A seemingly easy process wasn\u2019t...and then you look around and everyone is jus\u2026 https:\/\/t.co\/8CdJDiL6ky",
+            "truncated": true,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": [
+                    {
+                        "url": "https:\/\/t.co\/8CdJDiL6ky",
+                        "expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1594826189130145810",
+                        "display_url": "twitter.com\/i\/web\/status\/1\u2026",
+                        "indices": [
+                            117,
+                            140
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"https:\/\/mobile.twitter.com\" rel=\"nofollow\"\u003eTwitter Web App\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 33310560,
+                "id_str": "33310560",
+                "name": "bonny mcclain, human geographer, speaker, author\ud83c\udf0f",
+                "screen_name": "datamongerbonny",
+                "location": "blooming where planted...",
+                "description": "Polymath exploring environmental racism, persistent barriers to inclusion: spatial analyst | National Press Club | @URISA @500WomenSci @ArcGIS @QGIS #python#SQL",
+                "url": "https:\/\/t.co\/3MAW1NiFFn",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https:\/\/t.co\/3MAW1NiFFn",
+                                "expanded_url": "https:\/\/linktr.ee\/datamongerbonny",
+                                "display_url": "linktr.ee\/datamongerbonny",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 3158,
+                "friends_count": 1328,
+                "listed_count": 150,
+                "created_at": "Sun Apr 19 20:56:59 +0000 2009",
+                "favourites_count": 8642,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 15019,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "000000",
+                "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1489654482707402764\/z-PlAy-k_normal.jpg",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1489654482707402764\/z-PlAy-k_normal.jpg",
+                "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/33310560\/1660247735",
+                "profile_link_color": "1B95E0",
+                "profile_sidebar_border_color": "000000",
+                "profile_sidebar_fill_color": "000000",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "has_extended_profile": true,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 1,
+            "favorite_count": 1,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 21 22:19:05 +0000 2022",
+            "id": 1594817702127976449,
+            "id_str": "1594817702127976449",
+            "text": "Learn how @EDBPostgres helps @LondonPartners support the complex search behaviors of more than 2 million visitors t\u2026 https:\/\/t.co\/IwZaxH1c9o",
+            "truncated": true,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "EDBPostgres",
+                        "name": "EDB Postgres",
+                        "id": 15012163,
+                        "id_str": "15012163",
+                        "indices": [
+                            10,
+                            22
+                        ]
+                    },
+                    {
+                        "screen_name": "londonpartners",
+                        "name": "London & Partners",
+                        "id": 270405643,
+                        "id_str": "270405643",
+                        "indices": [
+                            29,
+                            44
+                        ]
+                    }
+                ],
+                "urls": [
+                    {
+                        "url": "https:\/\/t.co\/IwZaxH1c9o",
+                        "expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1594817702127976449",
+                        "display_url": "twitter.com\/i\/web\/status\/1\u2026",
+                        "indices": [
+                            117,
+                            140
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"https:\/\/www.oktopost.com\" rel=\"nofollow\"\u003eOktopost\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 20350147,
+                "id_str": "20350147",
+                "name": "Bryan Turriff",
+                "screen_name": "Turriff",
+                "location": "Little Rock",
+                "description": "Sr. Director of Product Marketing for @EDBPostgres. I tell compelling customer stories that grow businesses. #powertopostgres",
+                "url": null,
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 159,
+                "friends_count": 120,
+                "listed_count": 16,
+                "created_at": "Sun Feb 08 04:06:40 +0000 2009",
+                "favourites_count": 181,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 450,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "000000",
+                "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/1426216263324479489\/i_3i-n9x_normal.jpg",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/1426216263324479489\/i_3i-n9x_normal.jpg",
+                "profile_link_color": "1B95E0",
+                "profile_sidebar_border_color": "000000",
+                "profile_sidebar_fill_color": "000000",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "has_extended_profile": false,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 0,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 21 22:00:04 +0000 2022",
+            "id": 1594812918683512832,
+            "id_str": "1594812918683512832",
+            "text": "RT @pgus: Looking for a way to give back to the PostgreSQL Community? Why not volunteer to help organize a local PG Day! Contact us for mor\u2026",
+            "truncated": false,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "pgus",
+                        "name": "US PostgreSQL Assoc.",
+                        "id": 15033793,
+                        "id_str": "15033793",
+                        "indices": [
+                            3,
+                            8
+                        ]
+                    }
+                ],
+                "urls": []
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"https:\/\/mobile.twitter.com\" rel=\"nofollow\"\u003eTwitter Web App\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 927951204176429056,
+                "id_str": "927951204176429056",
+                "name": "Bay Area Postgres",
+                "screen_name": "BayAreaPostgres",
+                "location": "San Francisco Bay Area",
+                "description": "Twitter of the San Francisco Bay Area PostgreSQL Users Group!",
+                "url": "https:\/\/t.co\/P5fS55T6NP",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https:\/\/t.co\/P5fS55T6NP",
+                                "expanded_url": "https:\/\/www.meetup.com\/postgresql-1\/",
+                                "display_url": "meetup.com\/postgresql-1\/",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 360,
+                "friends_count": 39,
+                "listed_count": 8,
+                "created_at": "Tue Nov 07 17:29:42 +0000 2017",
+                "favourites_count": 1391,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 1569,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "F5F8FA",
+                "profile_background_image_url": null,
+                "profile_background_image_url_https": null,
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/927953530547183616\/80f7bl78_normal.jpg",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/927953530547183616\/80f7bl78_normal.jpg",
+                "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/927951204176429056\/1643754741",
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": false,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweeted_status": {
+                "created_at": "Mon Nov 21 02:28:01 +0000 2022",
+                "id": 1594517961422798849,
+                "id_str": "1594517961422798849",
+                "text": "Looking for a way to give back to the PostgreSQL Community? Why not volunteer to help organize a local PG Day! Cont\u2026 https:\/\/t.co\/ToEYWi67ht",
+                "truncated": true,
+                "entities": {
+                    "hashtags": [],
+                    "symbols": [],
+                    "user_mentions": [],
+                    "urls": [
+                        {
+                            "url": "https:\/\/t.co\/ToEYWi67ht",
+                            "expanded_url": "https:\/\/twitter.com\/i\/web\/status\/1594517961422798849",
+                            "display_url": "twitter.com\/i\/web\/status\/1\u2026",
+                            "indices": [
+                                117,
+                                140
+                            ]
+                        }
+                    ]
+                },
+                "metadata": {
+                    "iso_language_code": "en",
+                    "result_type": "recent"
+                },
+                "source": "\u003ca href=\"https:\/\/buffer.com\" rel=\"nofollow\"\u003eBuffer\u003c\/a\u003e",
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "in_reply_to_screen_name": null,
+                "user": {
+                    "id": 15033793,
+                    "id_str": "15033793",
+                    "name": "US PostgreSQL Assoc.",
+                    "screen_name": "pgus",
+                    "location": "United States",
+                    "description": "PostgresSQL.us is the official twitter account of the United States PostgreSQL Assoc.",
+                    "url": "https:\/\/t.co\/g9MSO1KBip",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https:\/\/t.co\/g9MSO1KBip",
+                                    "expanded_url": "http:\/\/www.postgresql.us",
+                                    "display_url": "postgresql.us",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": []
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 1221,
+                    "friends_count": 17,
+                    "listed_count": 29,
+                    "created_at": "Fri Jun 06 23:54:43 +0000 2008",
+                    "favourites_count": 587,
+                    "utc_offset": null,
+                    "time_zone": null,
+                    "geo_enabled": false,
+                    "verified": false,
+                    "statuses_count": 1206,
+                    "lang": null,
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "000000",
+                    "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_tile": false,
+                    "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/793496454748778497\/Fc5aQyGc_normal.jpg",
+                    "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/793496454748778497\/Fc5aQyGc_normal.jpg",
+                    "profile_link_color": "1B95E0",
+                    "profile_sidebar_border_color": "000000",
+                    "profile_sidebar_fill_color": "000000",
+                    "profile_text_color": "000000",
+                    "profile_use_background_image": false,
+                    "has_extended_profile": false,
+                    "default_profile": false,
+                    "default_profile_image": false,
+                    "following": false,
+                    "follow_request_sent": false,
+                    "notifications": false,
+                    "translator_type": "none",
+                    "withheld_in_countries": []
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 3,
+                "favorite_count": 2,
+                "favorited": false,
+                "retweeted": false,
+                "possibly_sensitive": false,
+                "lang": "en"
+            },
+            "is_quote_status": false,
+            "retweet_count": 3,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "lang": "en"
+        },
+        {
+            "created_at": "Mon Nov 21 21:59:23 +0000 2022",
+            "id": 1594812744745852960,
+            "id_str": "1594812744745852960",
+            "text": "RT @ascherbaum: PostgreSQL Person of the Week interview with: Tobias Bussmann (@TobiasBussmann)\n\n#PostgreSQL #PostgresFriends\nhttps:\/\/t.co\/\u2026",
+            "truncated": false,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "PostgreSQL",
+                        "indices": [
+                            97,
+                            108
+                        ]
+                    },
+                    {
+                        "text": "PostgresFriends",
+                        "indices": [
+                            109,
+                            125
+                        ]
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "ascherbaum",
+                        "name": "Andreas Scherbaum",
+                        "id": 423394795,
+                        "id_str": "423394795",
+                        "indices": [
+                            3,
+                            14
+                        ]
+                    },
+                    {
+                        "screen_name": "TobiasBussmann",
+                        "name": "Tobias Bussmann",
+                        "id": 4133126206,
+                        "id_str": "4133126206",
+                        "indices": [
+                            79,
+                            94
+                        ]
+                    }
+                ],
+                "urls": []
+            },
+            "metadata": {
+                "iso_language_code": "en",
+                "result_type": "recent"
+            },
+            "source": "\u003ca href=\"https:\/\/mobile.twitter.com\" rel=\"nofollow\"\u003eTwitter Web App\u003c\/a\u003e",
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 927951204176429056,
+                "id_str": "927951204176429056",
+                "name": "Bay Area Postgres",
+                "screen_name": "BayAreaPostgres",
+                "location": "San Francisco Bay Area",
+                "description": "Twitter of the San Francisco Bay Area PostgreSQL Users Group!",
+                "url": "https:\/\/t.co\/P5fS55T6NP",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https:\/\/t.co\/P5fS55T6NP",
+                                "expanded_url": "https:\/\/www.meetup.com\/postgresql-1\/",
+                                "display_url": "meetup.com\/postgresql-1\/",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 360,
+                "friends_count": 39,
+                "listed_count": 8,
+                "created_at": "Tue Nov 07 17:29:42 +0000 2017",
+                "favourites_count": 1391,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 1569,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "F5F8FA",
+                "profile_background_image_url": null,
+                "profile_background_image_url_https": null,
+                "profile_background_tile": false,
+                "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/927953530547183616\/80f7bl78_normal.jpg",
+                "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/927953530547183616\/80f7bl78_normal.jpg",
+                "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/927951204176429056\/1643754741",
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": false,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweeted_status": {
+                "created_at": "Mon Nov 21 14:59:51 +0000 2022",
+                "id": 1594707168967770113,
+                "id_str": "1594707168967770113",
+                "text": "PostgreSQL Person of the Week interview with: Tobias Bussmann (@TobiasBussmann)\n\n#PostgreSQL #PostgresFriends\nhttps:\/\/t.co\/Pugp8DNDNd",
+                "truncated": false,
+                "entities": {
+                    "hashtags": [
+                        {
+                            "text": "PostgreSQL",
+                            "indices": [
+                                81,
+                                92
+                            ]
+                        },
+                        {
+                            "text": "PostgresFriends",
+                            "indices": [
+                                93,
+                                109
+                            ]
+                        }
+                    ],
+                    "symbols": [],
+                    "user_mentions": [
+                        {
+                            "screen_name": "TobiasBussmann",
+                            "name": "Tobias Bussmann",
+                            "id": 4133126206,
+                            "id_str": "4133126206",
+                            "indices": [
+                                63,
+                                78
+                            ]
+                        }
+                    ],
+                    "urls": [
+                        {
+                            "url": "https:\/\/t.co\/Pugp8DNDNd",
+                            "expanded_url": "https:\/\/postgresql.life\/post\/tobias_bussmann\/",
+                            "display_url": "postgresql.life\/post\/tobias_bu\u2026",
+                            "indices": [
+                                110,
+                                133
+                            ]
+                        }
+                    ]
+                },
+                "metadata": {
+                    "iso_language_code": "en",
+                    "result_type": "recent"
+                },
+                "source": "\u003ca href=\"https:\/\/mobile.twitter.com\" rel=\"nofollow\"\u003eTwitter Web App\u003c\/a\u003e",
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "in_reply_to_screen_name": null,
+                "user": {
+                    "id": 423394795,
+                    "id_str": "423394795",
+                    "name": "Andreas Scherbaum",
+                    "screen_name": "ascherbaum",
+                    "location": "",
+                    "description": "Mastodon: https:\/\/t.co\/4KBIMXqywg",
+                    "url": "https:\/\/t.co\/xU5KKFbJRV",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https:\/\/t.co\/xU5KKFbJRV",
+                                    "expanded_url": "https:\/\/andreas.scherbaum.la\/",
+                                    "display_url": "andreas.scherbaum.la",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": [
+                                {
+                                    "url": "https:\/\/t.co\/4KBIMXqywg",
+                                    "expanded_url": "https:\/\/mastodon.social\/@ascherbaum",
+                                    "display_url": "mastodon.social\/@ascherbaum",
+                                    "indices": [
+                                        10,
+                                        33
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 1395,
+                    "friends_count": 493,
+                    "listed_count": 59,
+                    "created_at": "Mon Nov 28 13:05:36 +0000 2011",
+                    "favourites_count": 1,
+                    "utc_offset": null,
+                    "time_zone": null,
+                    "geo_enabled": false,
+                    "verified": false,
+                    "statuses_count": 45574,
+                    "lang": null,
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "C0DEED",
+                    "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+                    "profile_background_tile": false,
+                    "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/3722829793\/ae44d3fcc2710a61f5fa048eb0bb42cb_normal.jpeg",
+                    "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/3722829793\/ae44d3fcc2710a61f5fa048eb0bb42cb_normal.jpeg",
+                    "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/423394795\/1369744934",
+                    "profile_link_color": "1DA1F2",
+                    "profile_sidebar_border_color": "C0DEED",
+                    "profile_sidebar_fill_color": "DDEEF6",
+                    "profile_text_color": "333333",
+                    "profile_use_background_image": true,
+                    "has_extended_profile": false,
+                    "default_profile": true,
+                    "default_profile_image": false,
+                    "following": false,
+                    "follow_request_sent": false,
+                    "notifications": false,
+                    "translator_type": "none",
+                    "withheld_in_countries": []
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 5,
+                "favorite_count": 5,
+                "favorited": false,
+                "retweeted": false,
+                "possibly_sensitive": false,
+                "lang": "en"
+            },
+            "is_quote_status": false,
+            "retweet_count": 5,
+            "favorite_count": 0,
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "lang": "en"
+        }
+    ],
+    "search_metadata": {
+        "completed_in": 0.104,
+        "max_id": 1594853105078005761,
+        "max_id_str": "1594853105078005761",
+        "next_results": "?max_id=1594812744745852959&q=%23postgresql&include_entities=1",
+        "query": "%23postgresql",
+        "refresh_url": "?since_id=1594853105078005761&q=%23postgresql&include_entities=1",
+        "count": 15,
+        "since_id": 0,
+        "since_id_str": "0"
+    }
+}

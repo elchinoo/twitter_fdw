@@ -1,3 +1,6 @@
+#include "stddef.h"
+#include "oauth.h"
+
 #include "postgres.h"
 
 #include "access/reloptions.h"
@@ -25,39 +28,17 @@
 
 PG_MODULE_MAGIC;
 
-/*
- * From apiwiki.twitter.com
-{"results":[
 
-     {"text":"@twitterapi  http:\/\/tinyurl.com\/ctrefg",
-     "to_user_id":396524,
-     "to_user":"TwitterAPI",
-     "from_user":"jkoum",
-     "metadata":
-     {
-      "result_type":"popular",
-      "recent_retweets": 109
-     },
-     "id":1478555574,   
-     "from_user_id":1833773,
-     "iso_language_code":"nl",
-     "source":"<a href="http:\/\/twitter.com\/">twitter<\/a>",
-     "profile_image_url":"http:\/\/s3.amazonaws.com\/twitter_production\/profile_images\/118412707\/2522215727_a5f07da155_b_normal.jpg",
-     "created_at":"Wed, 08 Apr 2009 19:22:10 +0000"},
-     ... truncated ...],
-     "since_id":0,
-     "max_id":1480307926,
-     "refresh_url":"?since_id=1480307926&q=%40twitterapi",
-     "results_per_page":15,
-     "next_page":"?page=2&max_id=1480307926&q=%40twitterapi",
-     "completed_in":0.031704,
-     "page":1,
-     "query":"%40twitterapi"}
-}
- */
 
-#define SEARCH_ENDPOINT "http://search.twitter.com/search.json"
+#define HTTP_METHOD "GET"
+#define API_KEY "<API Key>"
+#define API_SECRET "<API Key Secret>"
+#define USER_ACCESS_TOKEN "<Access Token>"
+#define USER_ACCESS_TOKEN_SECRET "<Access Token Secret>"
 
+#define SEARCH_ENDPOINT "https://api.twitter.com/1.1/search/tweets.json"
+
+#define BUF_HEADER_SIZE 2048
 #define PROCID_TEXTEQ 67
 
 #if PG_VERSION_NUM < 90200
@@ -89,37 +70,76 @@ enum
 	FILTER_LOCALLY
 };
 
+/*
+ * From apiwiki.twitter.com
+{"results":[
+
+	 {
+		"text":"@twitterapi  http:\/\/tinyurl.com\/ctrefg",
+		"to_user_id":396524,
+		"to_user":"TwitterAPI",
+		"from_user":"jkoum",
+		"metadata":
+		{
+			"result_type":"popular",
+			"recent_retweets": 109
+		},
+		"id":1478555574,
+		"from_user_id":1833773,
+		"iso_language_code":"nl",
+		"source":"<a href="http:\/\/twitter.com\/">twitter<\/a>",
+		"profile_image_url":"http:\/\/s3.amazonaws.com\/twitter_production\/profile_images\/118412707\/2522215727_a5f07da155_b_normal.jpg",
+		"created_at":"Wed, 08 Apr 2009 19:22:10 +0000"},
+		... truncated ...],
+		"since_id":0,
+		"max_id":1480307926,
+		"refresh_url":"?since_id=1480307926&q=%40twitterapi",
+		"results_per_page":15,
+		"next_page":"?page=2&max_id=1480307926&q=%40twitterapi",
+		"completed_in":0.031704,
+		"page":1,
+		"query":"%40twitterapi"
+	 }
+}
+ */
+
 typedef struct ResultRoot
 {
-	struct ResultArray	   *results;
+	struct ResultArray *statuses;
 } ResultRoot;
 
 typedef struct ResultArray
 {
-	int					index;
-	struct Tweet	   *elements[512];
+	int index;
+	struct Tweet *elements[512];
 } ResultArray;
+
+typedef struct User
+{
+	char *id;
+	char *name;
+} User;
 
 typedef struct Tweet
 {
-	char	   *id;
-	char	   *text;
-	char	   *from_user;
-	char	   *from_user_id;
-	char	   *to_user;
-	char	   *to_user_id;
-	char	   *iso_language_code;
-	char	   *source;
-	char	   *profile_image_url;
-	char	   *created_at;
+	char *id;	//
+	char *text;	//
+	char *from_user;
+	char *from_user_id;
+	char *to_user;
+	char *to_user_id;
+	char *iso_language_code;
+	char *source;	// 
+	char *profile_image_url;
+	char *created_at;	//
 } Tweet;
 
 typedef struct TwitterReply
 {
-	ResultRoot	   *root;
-	AttInMetadata  *attinmeta;
-	int				rownum;
-	char		   *q;
+	ResultRoot *root;
+	AttInMetadata *attinmeta;
+	int rownum;
+	char *q;
 } TwitterReply;
 
 extern Datum twitter_fdw_validator(PG_FUNCTION_ARGS);
@@ -130,18 +150,18 @@ extern Datum twitter_fdw_handler(PG_FUNCTION_ARGS);
  */
 #ifdef OLD_FDW_API
 static FdwPlan *twitterPlan(Oid foreigntableid,
-						PlannerInfo *root,
-						RelOptInfo *baserel);
+							PlannerInfo *root,
+							RelOptInfo *baserel);
 #else
 static void twitterGetRelSize(PlannerInfo *root, RelOptInfo *baserel,
-							Oid foreigntableid);
+							  Oid foreigntableid);
 static void twitterGetPaths(PlannerInfo *root, RelOptInfo *baserel,
 							Oid foreigntableid);
 static ForeignScan *twitterGetPlan(PlannerInfo *root, RelOptInfo *baserel,
-							Oid foreigntableid, ForeignPath *best_path,
-							List *tlist, List *scan_clauses);
+								   Oid foreigntableid, ForeignPath *best_path,
+								   List *tlist, List *scan_clauses);
 static bool twitterAnalyze(Relation relation, AcquireSampleRowsFunc *func,
-							BlockNumber *totalpages);
+						   BlockNumber *totalpages);
 #endif
 static void twitterExplain(ForeignScanState *node, ExplainState *es);
 static void twitterBegin(ForeignScanState *node, int eflags);
@@ -154,17 +174,14 @@ static void *create_structure(int nesting, int is_object);
 static void *create_data(int type, const char *data, uint32_t length);
 static int append(void *structure, char *key, uint32_t key_length, void *obj);
 
-
 PG_FUNCTION_INFO_V1(twitter_fdw_validator);
-Datum
-twitter_fdw_validator(PG_FUNCTION_ARGS)
+Datum twitter_fdw_validator(PG_FUNCTION_ARGS)
 {
 	PG_RETURN_BOOL(true);
 }
 
 PG_FUNCTION_INFO_V1(twitter_fdw_handler);
-Datum
-twitter_fdw_handler(PG_FUNCTION_ARGS)
+Datum twitter_fdw_handler(PG_FUNCTION_ARGS)
 {
 	FdwRoutine *fdwroutine = makeNode(FdwRoutine);
 
@@ -179,7 +196,7 @@ twitter_fdw_handler(PG_FUNCTION_ARGS)
 	fdwroutine->GetForeignPaths = twitterGetPaths;
 	fdwroutine->GetForeignPlan = twitterGetPlan;
 	fdwroutine->AnalyzeForeignTable = twitterAnalyze;
-#endif;
+#endif
 	fdwroutine->ExplainForeignScan = twitterExplain;
 	fdwroutine->BeginForeignScan = twitterBegin;
 	fdwroutine->IterateForeignScan = twitterIterate;
@@ -192,23 +209,23 @@ twitter_fdw_handler(PG_FUNCTION_ARGS)
 static char *
 percent_encode(unsigned char *s, int srclen)
 {
-	unsigned char  *end;
-	StringInfoData  buf;
-	int				len;
+	unsigned char *end;
+	StringInfoData buf;
+	int len;
 
 	initStringInfo(&buf);
 
 	if (srclen < 0)
-		srclen = strlen((char *) s);
+		srclen = strlen((char *)s);
 
 	end = s + srclen;
 
 	for (; s < end; s += len)
 	{
-		unsigned char  *utf;
-		int				ulen;
+		unsigned char *utf;
+		int ulen;
 
-		len = pg_mblen((const char *) s);
+		len = pg_mblen((const char *)s);
 
 		if (len == 1)
 		{
@@ -224,8 +241,8 @@ percent_encode(unsigned char *s, int srclen)
 		}
 
 		utf = pg_do_encoding_conversion(s, len, GetDatabaseEncoding(), PG_UTF8);
-		ulen = pg_encoding_mblen(PG_UTF8, (const char *) utf);
-		while(ulen--)
+		ulen = pg_encoding_mblen(PG_UTF8, (const char *)utf);
+		while (ulen--)
 		{
 			appendStringInfo(&buf, "%%%2X", *utf);
 			utf++;
@@ -243,17 +260,17 @@ twitter_param(Node *node, TupleDesc tupdesc)
 
 	if (IsA(node, OpExpr))
 	{
-		OpExpr	   *op = (OpExpr *) node;
-		Node	   *left, *right;
-		Index		varattno;
-		char	   *key, *val;
+		OpExpr *op = (OpExpr *)node;
+		Node *left, *right;
+		Index varattno;
+		char *key, *val;
 
 		if (list_length(op->args) != 2)
 			return NULL;
 		left = list_nth(op->args, 0);
 		if (!IsA(left, Var))
 			return NULL;
-		varattno = ((Var *) left)->varattno;
+		varattno = ((Var *)left)->varattno;
 		Assert(0 < varattno && varattno <= tupdesc->natts);
 		key = NameStr(tupdesc->attrs[varattno - 1]->attname);
 
@@ -265,12 +282,12 @@ twitter_param(Node *node, TupleDesc tupdesc)
 
 			if (IsA(right, Const))
 			{
-				StringInfoData	buf;
+				StringInfoData buf;
 
 				initStringInfo(&buf);
-				val = TextDatumGetCString(((Const *) right)->constvalue);
+				val = TextDatumGetCString(((Const *)right)->constvalue);
 				appendStringInfo(&buf, "q=%s",
-					percent_encode((unsigned char *) val, -1));
+								 percent_encode((unsigned char *)val, -1));
 				return buf.data;
 			}
 			else
@@ -287,27 +304,27 @@ twitter_param(Node *node, TupleDesc tupdesc)
 static List *
 extract_twitter_conditions(List *conditions, TupleDesc tupdesc)
 {
-	List		   *result;
-	ListCell	   *l;
-	StringInfoData	url;
-	char		   *param_q;
-	int			   *handle_clauses;
-	int				clause_count;
-	bool			param_first;
+	List *result;
+	ListCell *l;
+	StringInfoData url;
+	char *param_q;
+	int *handle_clauses;
+	int clause_count;
+	bool param_first;
 
 	result = NIL;
 	initStringInfo(&url);
 	appendStringInfoString(&url, SEARCH_ENDPOINT);
 	param_q = NULL;
-	handle_clauses = (int *) palloc0(sizeof(int) * list_length(conditions));
+	handle_clauses = (int *)palloc0(sizeof(int) * list_length(conditions));
 	clause_count = -1;
 	param_first = true;
 	foreach (l, conditions)
 	{
-		RestrictInfo	   *cond = (RestrictInfo *) lfirst(l);
-		char	   *param;
+		RestrictInfo *cond = (RestrictInfo *)lfirst(l);
+		char *param;
 
-		param = twitter_param((Node *) cond->clause, tupdesc);
+		param = twitter_param((Node *)cond->clause, tupdesc);
 		if (param)
 		{
 			if (param_first)
@@ -339,18 +356,18 @@ extract_twitter_conditions(List *conditions, TupleDesc tupdesc)
 static List *
 remove_pushdown(List *scan_clauses, int *handle_clauses)
 {
-	List	   *keep_clauses;
+	List *keep_clauses;
 
 	if (handle_clauses != NULL)
 	{
-		int				i;
-		ListCell	   *l;
+		int i;
+		ListCell *l;
 
 		i = 0;
 		keep_clauses = NIL;
-		foreach(l, scan_clauses)
+		foreach (l, scan_clauses)
 		{
-			RestrictInfo	   *condition = lfirst(l);
+			RestrictInfo *condition = lfirst(l);
 
 			if (handle_clauses[i] != PUSHDOWN)
 				keep_clauses = lappend(keep_clauses, condition);
@@ -372,10 +389,10 @@ remove_pushdown(List *scan_clauses, int *handle_clauses)
 static FdwPlan *
 twitterPlan(Oid foreigntableid, PlannerInfo *root, RelOptInfo *baserel)
 {
-	FdwPlan	   *fdwplan;
-	Relation	relation;
-	TupleDesc	tupdesc;
-	int		   *handle_clauses;
+	FdwPlan *fdwplan;
+	Relation relation;
+	TupleDesc tupdesc;
+	int *handle_clauses;
 
 	fdwplan = makeNode(FdwPlan);
 	relation = relation_open(foreigntableid, AccessShareLock);
@@ -403,8 +420,8 @@ twitterGetRelSize(PlannerInfo *root, RelOptInfo *baserel, Oid foreigntableid)
 static void
 twitterGetPaths(PlannerInfo *root, RelOptInfo *baserel, Oid foreigntableid)
 {
-	Relation	relation;
-	TupleDesc	tupdesc;
+	Relation relation;
+	TupleDesc tupdesc;
 
 	relation = relation_open(foreigntableid, AccessShareLock);
 	tupdesc = relation->rd_att;
@@ -413,16 +430,16 @@ twitterGetPaths(PlannerInfo *root, RelOptInfo *baserel, Oid foreigntableid)
 
 	/* Create a ForeignPath node and add it as only possible path */
 	add_path(baserel,
-		(Path *)create_foreignscan_path(root, baserel, baserel->rows,
-				10, 1000, NIL, NULL, NIL));
+			 (Path *)create_foreignscan_path(root, baserel, baserel->rows,
+											 10, 1000, NIL, NULL, NIL));
 }
 
 static ForeignScan *
 twitterGetPlan(PlannerInfo *root, RelOptInfo *baserel, Oid foreigntableid,
 			   ForeignPath *bast_path, List *tlist, List *scan_clauses)
 {
-	List	   *keep_clauses;
-	int		   *handle_clauses;
+	List *keep_clauses;
+	int *handle_clauses;
 
 	handle_clauses = list_nth(baserel->fdw_private, FDW_PRIVATE_CLAUSES);
 	keep_clauses = remove_pushdown(scan_clauses, handle_clauses);
@@ -440,7 +457,7 @@ twitterAnalyze(Relation relation, AcquireSampleRowsFunc *func, BlockNumber *tota
 	return true;
 }
 
-#endif   /* OLD_FDW_API */
+#endif /* OLD_FDW_API */
 
 /*
  * twitterExplain
@@ -450,14 +467,14 @@ static void
 twitterExplain(ForeignScanState *node, ExplainState *es)
 {
 #ifdef OLD_FDW_API
-	List		   *fdw_private =
-		((FdwPlan *) ((ForeignScan *) node->ss.ps.plan)->fdwplan)->fdw_private;
+	List *fdw_private =
+		((FdwPlan *)((ForeignScan *)node->ss.ps.plan)->fdwplan)->fdw_private;
 #else
-	List		   *fdw_private =
+	List *fdw_private =
 		((ForeignScan *)node->ss.ps.plan)->fdw_private;
 #endif
-	char		   *url;
-	char			buf[256];
+	char *url;
+	char buf[256];
 
 	url = list_nth(fdw_private, FDW_PRIVATE_URL);
 	snprintf(buf, 256, "Search: %s", url);
@@ -472,22 +489,22 @@ static void
 twitterBegin(ForeignScanState *node, int eflags)
 {
 #ifdef OLD_FDW_API
-	List		   *fdw_private =
-		((FdwPlan *) ((ForeignScan *) node->ss.ps.plan)->fdwplan)->fdw_private;
+	List *fdw_private =
+		((FdwPlan *)((ForeignScan *)node->ss.ps.plan)->fdwplan)->fdw_private;
 #else
-	List		   *fdw_private =
+	List *fdw_private =
 		((ForeignScan *)node->ss.ps.plan)->fdw_private;
 #endif
-	CURL		   *curl;
-	int				ret;
-	json_parser		parser;
+	CURL *curl;
+	int ret;
+	json_parser parser;
 	json_parser_dom helper;
-	ResultRoot	   *root;
-	Relation		rel;
-	AttInMetadata  *attinmeta;
-	TwitterReply   *reply;
-	char		   *url;
-	char		   *param_q = NULL;
+	ResultRoot *root;
+	Relation rel;
+	AttInMetadata *attinmeta;
+	TwitterReply *reply;
+	char *url;
+	char *param_q = NULL;
 
 	/*
 	 * Do nothing in EXPLAIN
@@ -502,9 +519,33 @@ twitterBegin(ForeignScanState *node, int eflags)
 	json_parser_dom_init(&helper, create_structure, create_data, append);
 	json_parser_init(&parser, NULL, json_parser_dom_callback, &helper);
 
+	// We need to use oauth to authenticate
+	char *temp_url = NULL;
+	char *final_url = NULL;
+	char *auth_params = NULL;
+	char auth_header[BUF_HEADER_SIZE];
+	memset(&auth_header, 0, BUF_HEADER_SIZE);
+
+	char **argv = NULL;
+	int argc = oauth_split_url_parameters(url, &argv);
+	temp_url = oauth_sign_array2(&argc, &argv,
+								 NULL, OA_HMAC, HTTP_METHOD,
+								 API_KEY, API_SECRET, USER_ACCESS_TOKEN, USER_ACCESS_TOKEN_SECRET);
+	final_url = oauth_serialize_url_sep(argc, 0, argv, "&", 1);
+	auth_params = oauth_serialize_url_sep(argc, 1, argv, ", ", 6);
+    snprintf(auth_header, sizeof(auth_header),
+            "Authorization: OAuth %s", auth_params);
+
+	// Execute the call to the Twitter API
 	elog(DEBUG1, "requesting %s", url);
 	curl = curl_easy_init();
-	curl_easy_setopt(curl, CURLOPT_URL, url);
+
+	struct curl_slist* slist = NULL;
+	slist = curl_slist_append(slist, auth_header);
+	curl_easy_setopt(curl, CURLOPT_HTTPHEADER, slist);
+    curl_easy_setopt(curl, CURLOPT_URL, final_url);
+
+
 	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
 	curl_easy_setopt(curl, CURLOPT_WRITEDATA, &parser);
 	ret = curl_easy_perform(curl);
@@ -513,7 +554,7 @@ twitterBegin(ForeignScanState *node, int eflags)
 	rel = node->ss.ss_currentRelation;
 	attinmeta = TupleDescGetAttInMetadata(rel->rd_att);
 
-	root = (ResultRoot *) helper.root_structure;
+	root = (ResultRoot *)helper.root_structure;
 
 	/* status != 200, or other similar error */
 	if (!root)
@@ -523,7 +564,7 @@ twitterBegin(ForeignScanState *node, int eflags)
 	if (root->results)
 	{
 		int i;
-		for(i = 0; i < root->results->index; i++)
+		for (i = 0; i < root->results->index; i++)
 		{
 			Tweet *tweet = root->results->elements[i];
 			printf("%02d[%s]: %s\n", (i + 1), tweet->from_user, tweet->text);
@@ -531,12 +572,12 @@ twitterBegin(ForeignScanState *node, int eflags)
 	}
 #endif
 
-	reply = (TwitterReply *) palloc(sizeof(TwitterReply));
+	reply = (TwitterReply *)palloc(sizeof(TwitterReply));
 	reply->root = root;
 	reply->attinmeta = attinmeta;
 	reply->rownum = 0;
 	reply->q = param_q;
-	node->fdw_state = (void *) reply;
+	node->fdw_state = (void *)reply;
 
 	json_parser_free(&parser);
 }
@@ -548,27 +589,28 @@ twitterBegin(ForeignScanState *node, int eflags)
 static TupleTableSlot *
 twitterIterate(ForeignScanState *node)
 {
-	TupleTableSlot	   *slot = node->ss.ss_ScanTupleSlot;
-	TwitterReply	   *reply = (TwitterReply *) node->fdw_state;
-	ResultRoot		   *root = reply->root;
-	Tweet			   *tweet;
-	HeapTuple			tuple;
-	Relation			rel = node->ss.ss_currentRelation;
-	int					i, natts;
-	char			  **values;
-	MemoryContext		oldcontext;
+	TupleTableSlot *slot = node->ss.ss_ScanTupleSlot;
+	TwitterReply *reply = (TwitterReply *)node->fdw_state;
+	ResultRoot *root = reply->root;
+	Tweet *tweet;
+	HeapTuple tuple;
+	Relation rel = node->ss.ss_currentRelation;
+	int i, natts;
+	char **values;
+	MemoryContext oldcontext;
 
-	if (!root || !(root->results && reply->rownum < root->results->index))
+	if (!root || !(root->statuses && reply->rownum < root->statuses->index))
 	{
 		ExecClearTuple(slot);
 		return slot;
 	}
-	tweet = root->results->elements[reply->rownum];
+
+	tweet = root->statuses->elements[reply->rownum];
 	natts = rel->rd_att->natts;
-	values = (char **) palloc(sizeof(char *) * natts);
+	values = (char **)palloc(sizeof(char *) * natts);
 	for (i = 0; i < natts; i++)
 	{
-		Name	attname = &rel->rd_att->attrs[i]->attname;
+		Name attname = &rel->rd_att->attrs[i]->attname;
 
 		if (namestrcmp(attname, "id") == 0 && tweet->id)
 			values[i] = tweet->id;
@@ -610,7 +652,7 @@ twitterIterate(ForeignScanState *node)
 static void
 twitterReScan(ForeignScanState *node)
 {
-	TwitterReply	   *reply = (TwitterReply *) node->fdw_state;
+	TwitterReply *reply = (TwitterReply *)node->fdw_state;
 
 	reply->rownum = 0;
 }
@@ -624,12 +666,13 @@ twitterEnd(ForeignScanState *node)
 static size_t
 write_data(void *buffer, size_t size, size_t nmemb, void *userp)
 {
-	int			segsize = size * nmemb;
-	json_parser *parser = (json_parser *) userp;
-	int			ret;
+	int segsize = size * nmemb;
+	json_parser *parser = (json_parser *)userp;
+	int ret;
 
 	ret = json_parser_string(parser, buffer, segsize, NULL);
-	if (ret){
+	if (ret)
+	{
 		elog(ERROR, "json_parser failed");
 	}
 
@@ -640,7 +683,7 @@ write_data(void *buffer, size_t size, size_t nmemb, void *userp)
  * since create_structure() raise error on returning NULL,
  * dummy pointer will be returned if the result can be discarded.
  */
-static void *dummy_p = (void *) "dummy";
+static void *dummy_p = (void *)"dummy";
 
 static void *
 create_structure(int nesting, int is_object)
@@ -649,17 +692,17 @@ create_structure(int nesting, int is_object)
 	{
 		if (nesting == 0)
 		{
-			ResultRoot	   *root;
+			ResultRoot *root;
 
-			root = (ResultRoot *) palloc0(sizeof(ResultRoot));
-			return (void *) root;
+			root = (ResultRoot *)palloc0(sizeof(ResultRoot));
+			return (void *)root;
 		}
 		else if (nesting == 2)
 		{
-			Tweet	   *tweet;
+			Tweet *tweet;
 
-			tweet = (Tweet *) palloc0(sizeof(Tweet));
-			return (void *) tweet;
+			tweet = (Tweet *)palloc0(sizeof(Tweet));
+			return (void *)tweet;
 		}
 		return dummy_p;
 	}
@@ -667,9 +710,9 @@ create_structure(int nesting, int is_object)
 	{
 		if (nesting == 1)
 		{
-			ResultArray	   *array;
+			ResultArray *array;
 
-			array = (ResultArray *) palloc(sizeof(ResultArray));
+			array = (ResultArray *)palloc(sizeof(ResultArray));
 			array->index = 0;
 			return array;
 		}
@@ -681,12 +724,12 @@ create_structure(int nesting, int is_object)
 static void *
 create_data(int type, const char *data, uint32_t length)
 {
-	switch(type)
+	switch (type)
 	{
 	case JSON_STRING:
 	case JSON_INT:
 	case JSON_FLOAT:
-		return (void *) data;
+		return (void *)data;
 
 	case JSON_NULL:
 	case JSON_TRUE:
@@ -697,16 +740,17 @@ create_data(int type, const char *data, uint32_t length)
 	return NULL;
 }
 
-#define TWEETCOPY(structure, key, obj) \
-do{ \
-	Tweet  *tweet = (Tweet *) (structure); \
-	int		len = strlen((char *) (obj)); \
-	if (len > 0) \
-	{ \
-		tweet->key = (char *) palloc(sizeof(char) * (len + 1)); \
-		strcpy(tweet->key, (obj)); \
-	} \
-} while(0)
+#define TWEETCOPY(structure, key, obj)                             \
+	do                                                             \
+	{                                                              \
+		Tweet *tweet = (Tweet *)(structure);                       \
+		int len = strlen((char *)(obj));                           \
+		if (len > 0)                                               \
+		{                                                          \
+			tweet->key = (char *)palloc(sizeof(char) * (len + 1)); \
+			strcpy(tweet->key, (obj));                             \
+		}                                                          \
+	} while (0)
 
 static int
 append(void *structure, char *key, uint32_t key_length, void *obj)
@@ -716,30 +760,30 @@ append(void *structure, char *key, uint32_t key_length, void *obj)
 		/* discard any unnecessary data */
 		if (structure == dummy_p)
 			return 0;
-		if (strcmp(key, "results") == 0)
+		if (strcmp(key, "statuses") == 0)
 		{
 			/* root.results = array; */
-			((ResultRoot *) structure)->results = (ResultArray *) obj;
+			((ResultRoot *)structure)->statuses = (ResultArray *)obj;
 		}
 		else if (strcmp(key, "id") == 0 && obj)
 			TWEETCOPY(structure, id, obj);
 		else if (strcmp(key, "text") == 0 && obj)
 			TWEETCOPY(structure, text, obj);
-		else if(strcmp(key, "from_user") == 0 && obj)
+		else if (strcmp(key, "from_user") == 0 && obj)
 			TWEETCOPY(structure, from_user, obj);
-		else if(strcmp(key, "from_user_id") == 0 && obj)
+		else if (strcmp(key, "from_user_id") == 0 && obj)
 			TWEETCOPY(structure, from_user_id, obj);
-		else if(strcmp(key, "to_user") == 0 && obj)
+		else if (strcmp(key, "to_user") == 0 && obj)
 			TWEETCOPY(structure, to_user, obj);
-		else if(strcmp(key, "to_user_id") == 0 && obj)
+		else if (strcmp(key, "to_user_id") == 0 && obj)
 			TWEETCOPY(structure, to_user_id, obj);
-		else if(strcmp(key, "iso_language_code") == 0)
+		else if (strcmp(key, "iso_language_code") == 0)
 			TWEETCOPY(structure, iso_language_code, obj);
-		else if(strcmp(key, "source") == 0 && obj)
+		else if (strcmp(key, "source") == 0 && obj)
 			TWEETCOPY(structure, source, obj);
-		else if(strcmp(key, "profile_image_url") == 0 && obj)
+		else if (strcmp(key, "profile_image_url") == 0 && obj)
 			TWEETCOPY(structure, profile_image_url, obj);
-		else if(strcmp(key, "created_at") == 0 && obj)
+		else if (strcmp(key, "created_at") == 0 && obj)
 			TWEETCOPY(structure, created_at, obj);
 	}
 	else
@@ -748,10 +792,10 @@ append(void *structure, char *key, uint32_t key_length, void *obj)
 		 * array.push(tweet);
 		 * an array that is not dummy_p must be root.results
 		 */
-		ResultArray *array = (ResultArray *) structure;
+		ResultArray *array = (ResultArray *)structure;
 
 		if (array != dummy_p)
-			array->elements[array->index++] = (Tweet *) obj;
+			array->elements[array->index++] = (Tweet *)obj;
 	}
 	return 0;
 }

@@ -1,0 +1,9 @@
+.deps/
+.vscode/
+libjson-0.8/*
+API_KEYS.txt
+*.o
+*.so*
+*.a
+*.swp
+
